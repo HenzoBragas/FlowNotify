@@ -8,14 +8,14 @@ import jakarta.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 public record ItemProductDto(
-        @NotBlank String idProduct,
+        @NotBlank String id_product,
         @NotNull Integer quantity,
-        @NotNull @Digits(integer = 10, fraction = 2) BigDecimal unitPrice) {
+        @NotNull @Digits(integer = 10, fraction = 2) BigDecimal unit_price) {
     public ItemProductDto(ItemOrder entity) {
         this(
-                entity.getIdProduct(),
+                entity.getId_product(),
                 entity.getQuantity(),
-                entity.getUnitPrice());
+                entity.getUnit_price());
     }
 
 }

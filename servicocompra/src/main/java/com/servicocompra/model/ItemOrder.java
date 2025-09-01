@@ -15,13 +15,13 @@ import java.math.BigDecimal;
 @Getter
 public class ItemOrder {
 
-    private String idProduct;
+    private String id_product;
     private Integer quantity;
-    private BigDecimal unitPrice;
+    private BigDecimal unit_price;
 
     public ItemOrder(ItemProductDto data) {
-        this.idProduct = data.idProduct();
+        this.id_product = data.id_product();
         this.quantity = data.quantity();
-        this.unitPrice = data.unitPrice();
+        this.unit_price = data.unit_price();
     }
 }

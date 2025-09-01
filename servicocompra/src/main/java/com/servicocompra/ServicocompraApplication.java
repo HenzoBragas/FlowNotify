@@ -1,13 +1,18 @@
 package com.servicocompra;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServicocompraApplication {
+public class ServicocompraApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ServicocompraApplication.class, args);
 	}
 
+	@Override
+	public void run(String... args) {
+		System.out.println("Conexão feita, aplicação rodando");
+	}
 }

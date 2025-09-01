@@ -22,7 +22,7 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id_buy;
+    private Long id_buy;
     private Long id_user;
     private BigDecimal total_price;
 
@@ -34,9 +34,8 @@ public class Order {
     private List<ItemOrder> items;
 
     public Order(OrderDTO dto) {
-        this.id_buy = dto.id_buy();
         this.id_user = dto.id_user();
-        this.total_price = dto.totalprice();
+        this.total_price = dto.total_price();
         if (dto.items() != null) {
             this.items = dto.items().stream()
                     .map(ItemOrder::new)
