@@ -17,7 +17,7 @@ public record OrderDTO(
         @NotNull @Valid List<ItemProductDto> items
 ) {
     public OrderDTO(Order entity) {
-        this( // "this" chama o construtor principal do record
+        this( 
                 entity.getId_user(),
                 entity.getTotal_price(),
                 entity.getItems().stream()
