@@ -10,9 +10,10 @@ notificar os usuários.
 
 O fluxo de uma nova compra é o seguinte:
 
+````
 Cliente ➡️ [POST /pedidos] ➡️ [Serviço de Compras] ➡️ [Salva no PostgreSQL] ➡️ [Publica Evento no Kafka]
 ➡️ [Serviço de Notificação] ➡️ [Envia E-mail de Confirmação]
-
+````
 ## 🚀 Tecnologias Utilizadas
 
 * **Linguagem:** Java 17+

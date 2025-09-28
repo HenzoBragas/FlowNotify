@@ -1,4 +1,4 @@
-package com.service.service;
+package com.service.configuration;
 
 
 import com.service.event.EventOrder;

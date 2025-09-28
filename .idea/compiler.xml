@@ -9,10 +9,28 @@
         <outputRelativeToContentRoot value="true" />
         <module name="servicocompra" />
       </profile>
+      <profile name="Annotation profile for flowNotify" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="service-notification" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AP-IGateway" target="21" />
+      <module name="demo" target="21" />
+      <module name="Service-Discovery" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AP-IGateway" options="-parameters" />
+      <module name="Service-Discovery" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="service-notification" options="-parameters" />
       <module name="servicocompra" options="-parameters" />
     </option>
   </component>
